@@ -50,15 +50,6 @@ ol {
 
 /*RESULT*/
 
-/*
-.result {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 16px;
-}
-  */
-
 .result__video-container {
   position: relative;
   block-size: 386px;
@@ -100,6 +91,7 @@ ol {
   font-size: inherit;
   inline-size: 225px;
   appearance: none;
+  color: #fff;
 }
 
 fieldset.search-form__fieldset {
@@ -149,6 +141,10 @@ fieldset.search-form__fieldset {
 .search-form__label:has(input[type="checkbox"]) {
   display: flex;
   align-items: center;
+}
+
+.search-form__label:has(input[type="checkbox"]):hover {
+  text-decoration: underline;
 }
 
 .search-form__label-text:hover {
@@ -204,6 +200,14 @@ button {
 
 .search-form__submit-button {
   padding: 6px 74px;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+button:focus-visible {
+  outline-offset: 2px;
 }
 
 button:hover {
@@ -321,5 +325,3 @@ button:active {
 }
 
 /* END */
-
-
