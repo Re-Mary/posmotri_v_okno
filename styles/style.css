@@ -42,7 +42,8 @@ ol {
 }
 
 .content {
-  width: 1140px;
+  max-width: 1140px;
+  width: 100%;
   display: flex;
   align-items: flex-end;
   gap: 30px;
@@ -53,7 +54,7 @@ ol {
 .result__video-container {
   position: relative;
   block-size: 386px;
-  margin-bottom: 16px;
+  margin-block-end: 16px;
   inline-size: 711px;
 }
 
@@ -64,7 +65,6 @@ ol {
 }
 
 .search-form {
-  block-size: 54px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -94,7 +94,7 @@ ol {
   color: #fff;
 }
 
-fieldset.search-form__fieldset {
+.search-form__fieldset {
   border: none;
 }
 
@@ -135,20 +135,13 @@ fieldset.search-form__fieldset {
 
 .search-form__label {
   width: fit-content;
-  display: inline-block;
-}
-
-.search-form__label:has(input[type="checkbox"]) {
   display: flex;
   align-items: center;
 }
 
-.search-form__label:has(input[type="checkbox"]):hover {
-  text-decoration: underline;
-}
-
-.search-form__label-text:hover {
+.search-form__checkbox-list > .search-form__label:hover {
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .search-form__pseudo-checkbox {
@@ -157,10 +150,6 @@ fieldset.search-form__fieldset {
   width: 19px;
   height: 19px;
   border: 1px solid #fff;
-}
-
-input[type="checkbox"]:hover {
-  cursor: pointer;
 }
 
 input[type="checkbox"]:checked + span {
@@ -181,10 +170,6 @@ input[type="checkbox"]:focus-visible {
   background-color: #fff;
 }
 
-.search-form__label-text:hover {
-  text-decoration: underline;
-}
-
 button {
   height: 34px;
   border: 1px solid #fff;
@@ -199,15 +184,16 @@ button {
 }
 
 .search-form__submit-button {
-  padding: 6px 74px;
+  padding: 6px 73px;
 }
 
-button:focus:not(:focus-visible) {
+button:focus {
   outline: none;
 }
 
 button:focus-visible {
-  outline-offset: 2px;
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 button:hover {
@@ -219,7 +205,8 @@ button:active {
 }
 
 .more-button {
-  width: 100%;
+  width: 98%;
+  margin: 3px;
 }
 
 /*CONTENT__CARD*/
@@ -233,7 +220,7 @@ button:active {
 .title {
   font-size: 75px;
   text-transform: uppercase;
-  line-height: 70.5px;
+  line-height: 0.94em;
   color: #fff;
   font-family: Oswald, sans-serif;
   margin-top: 5px;
@@ -263,7 +250,7 @@ button:active {
   background-color: #545050;
 }
 
-.content__card-link:focus:not(:focus-visible) {
+.content__card-link:focus {
   outline: none;
 }
 
@@ -283,7 +270,7 @@ button:active {
 
 .content__video-card {
   display: flex;
-  width: 380px; /*new*/
+  width: 380px;
 }
 
 .content__video-card-description-container {
@@ -321,7 +308,5 @@ button:active {
   object-position: center;
   object-fit: cover;
   inline-size: 194px;
-  block-size: 103px;
+  block-size: 107px;
 }
-
-/* END */
